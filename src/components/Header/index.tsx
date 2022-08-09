@@ -1,6 +1,11 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Button } from "@chakra-ui/react";
 import Logo from "../../../public/logo.png";
-export function Header() {
+
+interface HeaderProps {
+  continent: string;
+}
+
+export function Header({ continent }: HeaderProps) {
   return (
     <Flex
       w="100%"
@@ -9,9 +14,19 @@ export function Header() {
       mx="auto"
       px="4"
       border="1px"
-      justifyContent="center"
+      alignItems="center"
     >
-      <Image src="/logo.png" alt="Worldtrip logo" />
+      {continent !== "home" ? (
+        <Button position="absolute" marginLeft="3rem">
+          <Image src="/back.png" alt="Back to home" />
+        </Button>
+      ) : null}
+      <Image
+        margin="auto"
+        height={45.92}
+        src="/logo.png"
+        alt="Worldtrip logo"
+      />
     </Flex>
   );
 }
