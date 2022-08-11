@@ -12,7 +12,7 @@ import { Header } from "../components/Header";
 
 export default function Home() {
   return (
-    <Flex w="100vw" height="100vh" flexDirection="column" margin="auto">
+    <Flex w="100%" height="99vh" flexDirection="column" margin="auto">
       <Header continent="home" />
       <Box w="100%" h="368.21px" position="relative">
         <Flex
@@ -130,6 +130,20 @@ export default function Home() {
         borderColor="gray.900"
         borderBottomWidth="3px"
       />
+      <Text
+        fontWeight="500"
+        fontSize="36px"
+        lineHeight="54px"
+        color="gray.900"
+        mx="auto"
+        my="3.25rem"
+        maxW={839}
+        textAlign="center"
+      >
+        Vamos nessa?
+        <br />
+        Então escolha seu continente
+      </Text>
     </Flex>
   );
 }
