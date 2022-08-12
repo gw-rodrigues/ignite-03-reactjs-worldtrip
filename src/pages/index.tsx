@@ -8,6 +8,8 @@ import {
   Center,
   Divider,
 } from "@chakra-ui/react";
+import Carousel from "../components/Carousel";
+
 import { Header } from "../components/Header";
 
 export default function Home() {
@@ -144,6 +146,8 @@ export default function Home() {
         <br />
         Então escolha seu continente
       </Text>
+
+      <Carousel />
     </Flex>
   );
 }
