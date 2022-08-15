@@ -1059,9 +1059,9 @@
   integrity sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==
 
 "@types/node@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.0.0.tgz"
-  integrity sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==
+  version "18.7.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.3.tgz#432c89796eab539b7a30b7b8801a727b585238a4"
+  integrity sha512-LJgzOEwWuMTBxHzgBR/fhhBOWrvBjvO+zPteUgbbuQi80rYIZHrk1mNbRUqPZqSLP2H7Rwt1EFLL/tNLD1Xx/w==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -2616,6 +2616,11 @@ react-animate-height@2.0.21:
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.1"
+
+react-circle-flags@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.npmjs.org/react-circle-flags/-/react-circle-flags-0.0.17.tgz"
+  integrity sha512-RsgnkmTuSQNlB5jn7XcFzbp3W+WI75/sxT5CtjPa+67AiM8qjgMvxC45UWvDkjxH+qpoIAwEvA6VXpBbfnyH3g==
 
 react-clientside-effect@^1.2.6:
   version "1.2.6"
