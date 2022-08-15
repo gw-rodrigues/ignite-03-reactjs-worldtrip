@@ -23,10 +23,33 @@ import { Header } from "../components/Header";
 
 import { CircleFlag } from "react-circle-flags";
 
-export default function Continents({ continent }) {
+interface ContinentProps {
+  slug: string | string[];
+  title: string;
+  description: string;
+  totalCountries: string;
+  totalLanguages: string;
+  totalCities: string;
+  data: {
+    city: string;
+    country: string;
+    image: string;
+    flag: string;
+  }[];
+}
+
+export default function Continent({
+  slug,
+  title,
+  description,
+  totalCountries,
+  totalLanguages,
+  totalCities,
+  data,
+}: ContinentProps): JSX.Element {
   return (
     <VStack w="100%" height="99vh" margin="auto">
-      <Header continent={continent} />
+      <Header continent={String(slug)} />
 
       <Box
         flexDir="column"
@@ -47,7 +70,7 @@ export default function Continents({ continent }) {
           bottom="3.68rem"
           left="8.75%"
         >
-          {continent}
+          {title}
         </Text>
       </Box>
 
@@ -68,10 +91,7 @@ export default function Continents({ continent }) {
           lineHeight="36px"
           textAlign="justify"
         >
-          A Europa é, por convenção, um dos seis continentes do mundo.
-          Compreendendo a península ocidental da Eurásia, a Europa geralmente
-          divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-          rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+          {description}
         </Text>
         <HStack gap={42} flexWrap="wrap" justifyContent="center">
           <VStack textAlign="center">
@@ -81,7 +101,7 @@ export default function Continents({ continent }) {
               lineHeight="72px"
               color="brand.yellow-550"
             >
-              50
+              {totalCountries}
             </Text>
             <Text
               fontWeight="600"
@@ -99,7 +119,7 @@ export default function Continents({ continent }) {
               lineHeight="72px"
               color="brand.yellow-550"
             >
-              60
+              {totalLanguages}
             </Text>
             <Text
               fontWeight="600"
@@ -117,7 +137,7 @@ export default function Continents({ continent }) {
               lineHeight="72px"
               color="brand.yellow-550"
             >
-              27
+              {totalCities}
             </Text>
             <HStack>
               <Text
@@ -162,266 +182,61 @@ export default function Continents({ continent }) {
           width="100%"
           justifyItems="start"
         >
-          <Box
-            w="256px"
-            h="279px"
-            border="1px solid"
-            borderColor="brand.yellow-550"
-            borderRadius="4px"
-            bg="white"
-            overflow="hidden"
-          >
-            <Flex
-              w="100%"
-              h="173px"
-              justifyItems="center"
-              alignItems="center"
+          {data.map((continent) => (
+            <Box
+              key={continent.country}
+              w="256px"
+              h=" 279px"
+              border="1px solid"
+              borderColor="brand.yellow-550"
+              borderRadius="4px"
+              bg="white"
               overflow="hidden"
             >
-              <Image
-                h="100%"
-                w="auto"
-                src="/cities/europe/london.jpeg"
-                alt="london"
-              />
-            </Flex>
-            <HStack
-              h="104px"
-              alignContent="center"
-              justifyContent="space-between"
-              px="24px"
-            >
-              <VStack alignItems="start">
-                <Text
-                  lineHeight="25px"
-                  fontWeight="600"
-                  fontSize="20px"
-                  color="brand.gray-900"
-                >
-                  Londres
-                </Text>
-                <Text
-                  lineHeight="26px"
-                  fontWeight="500"
-                  fontSize="16px"
-                  color="brand.gray-400"
-                >
-                  Reino Unido
-                </Text>
-              </VStack>
-              <Box w={30} h={30}>
-                <CircleFlag countryCode="gb" />
-              </Box>
-            </HStack>
-          </Box>
-          <Box
-            w="256px"
-            h="279px"
-            border="1px solid"
-            borderColor="brand.yellow-550"
-            borderRadius="4px"
-            bg="white"
-            overflow="hidden"
-          >
-            <Flex
-              w="100%"
-              h="173px"
-              justifyItems="center"
-              alignItems="center"
-              overflow="hidden"
-            >
-              <Image
-                h="100%"
-                w="auto"
-                src="/cities/europe/london.jpeg"
-                alt="london"
-              />
-            </Flex>
-            <HStack
-              h="104px"
-              alignContent="center"
-              justifyContent="space-between"
-              px="24px"
-            >
-              <VStack alignItems="start">
-                <Text
-                  lineHeight="25px"
-                  fontWeight="600"
-                  fontSize="20px"
-                  color="brand.gray-900"
-                >
-                  Londres
-                </Text>
-                <Text
-                  lineHeight="26px"
-                  fontWeight="500"
-                  fontSize="16px"
-                  color="brand.gray-400"
-                >
-                  Reino Unido
-                </Text>
-              </VStack>
-              <Box w={30} h={30}>
-                <CircleFlag countryCode="gb" />
-              </Box>
-            </HStack>
-          </Box>
-          <Box
-            w="256px"
-            h="279px"
-            border="1px solid"
-            borderColor="brand.yellow-550"
-            borderRadius="4px"
-            bg="white"
-            overflow="hidden"
-          >
-            <Flex
-              w="100%"
-              h="173px"
-              justifyItems="center"
-              alignItems="center"
-              overflow="hidden"
-            >
-              <Image
-                h="100%"
-                w="auto"
-                src="/cities/europe/london.jpeg"
-                alt="london"
-              />
-            </Flex>
-            <HStack
-              h="104px"
-              alignContent="center"
-              justifyContent="space-between"
-              px="24px"
-            >
-              <VStack alignItems="start">
-                <Text
-                  lineHeight="25px"
-                  fontWeight="600"
-                  fontSize="20px"
-                  color="brand.gray-900"
-                >
-                  Londres
-                </Text>
-                <Text
-                  lineHeight="26px"
-                  fontWeight="500"
-                  fontSize="16px"
-                  color="brand.gray-400"
-                >
-                  Reino Unido
-                </Text>
-              </VStack>
-              <Box w={30} h={30}>
-                <CircleFlag countryCode="gb" />
-              </Box>
-            </HStack>
-          </Box>
-          <Box
-            w="256px"
-            h="279px"
-            border="1px solid"
-            borderColor="brand.yellow-550"
-            borderRadius="4px"
-            bg="white"
-            overflow="hidden"
-          >
-            <Flex
-              w="100%"
-              h="173px"
-              justifyItems="center"
-              alignItems="center"
-              overflow="hidden"
-            >
-              <Image
-                h="100%"
-                w="auto"
-                src="/cities/europe/london.jpeg"
-                alt="london"
-              />
-            </Flex>
-            <HStack
-              h="104px"
-              alignContent="center"
-              justifyContent="space-between"
-              px="24px"
-            >
-              <VStack alignItems="start">
-                <Text
-                  lineHeight="25px"
-                  fontWeight="600"
-                  fontSize="20px"
-                  color="brand.gray-900"
-                >
-                  Londres
-                </Text>
-                <Text
-                  lineHeight="26px"
-                  fontWeight="500"
-                  fontSize="16px"
-                  color="brand.gray-400"
-                >
-                  Reino Unido
-                </Text>
-              </VStack>
-              <Box w={30} h={30}>
-                <CircleFlag countryCode="gb" />
-              </Box>
-            </HStack>
-          </Box>
-          <Box
-            w="256px"
-            h="279px"
-            border="1px solid"
-            borderColor="brand.yellow-550"
-            borderRadius="4px"
-            bg="white"
-            overflow="hidden"
-          >
-            <Flex
-              w="100%"
-              h="173px"
-              justifyItems="center"
-              alignItems="center"
-              overflow="hidden"
-            >
-              <Image
-                h="100%"
-                w="auto"
-                src="/cities/europe/london.jpeg"
-                alt="london"
-              />
-            </Flex>
-            <HStack
-              h="104px"
-              alignContent="center"
-              justifyContent="space-between"
-              px="24px"
-            >
-              <VStack alignItems="start">
-                <Text
-                  lineHeight="25px"
-                  fontWeight="600"
-                  fontSize="20px"
-                  color="brand.gray-900"
-                >
-                  Londres
-                </Text>
-                <Text
-                  lineHeight="26px"
-                  fontWeight="500"
-                  fontSize="16px"
-                  color="brand.gray-400"
-                >
-                  Reino Unido
-                </Text>
-              </VStack>
-              <Box w={30} h={30}>
-                <CircleFlag countryCode="gb" />
-              </Box>
-            </HStack>
-          </Box>
+              <Flex
+                w="100%"
+                h="173px"
+                justifyItems="center"
+                alignItems="center"
+                overflow="hidden"
+              >
+                <Image
+                  minH="100%"
+                  w="auto"
+                  src={continent.image}
+                  alt={continent.city}
+                />
+              </Flex>
+              <HStack
+                h="104px"
+                alignContent="center"
+                justifyContent="space-between"
+                px="24px"
+              >
+                <VStack alignItems="start">
+                  <Text
+                    lineHeight="25px"
+                    fontWeight="600"
+                    fontSize="20px"
+                    color="brand.gray-900"
+                  >
+                    {continent.city}
+                  </Text>
+                  <Text
+                    lineHeight="26px"
+                    fontWeight="500"
+                    fontSize="16px"
+                    color="brand.gray-400"
+                  >
+                    {continent.country}
+                  </Text>
+                </VStack>
+                <Box w={30} h={30}>
+                  <CircleFlag countryCode={continent.flag} />
+                </Box>
+              </HStack>
+            </Box>
+          ))}
         </Flex>
       </VStack>
     </VStack>
@@ -431,15 +246,46 @@ export default function Continents({ continent }) {
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   let { slug } = params;
 
-  switch (slug) {
-    case "europa":
-      slug = "Europa";
-      break;
-
-    default:
-      slug = "404";
-      break;
-  }
-
-  return { props: { continent: slug } };
+  const props: ContinentProps = {
+    slug,
+    title: "Europa",
+    description:
+      "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+    totalCountries: "50",
+    totalLanguages: "60",
+    totalCities: "27",
+    data: [
+      {
+        country: "Reino Unido",
+        city: "Londres",
+        image: "/cities/europe/london.jpeg",
+        flag: "gb",
+      },
+      {
+        country: "França",
+        city: "Paris",
+        image: "/cities/europe/paris.jpeg",
+        flag: "fr",
+      },
+      {
+        country: "Itália",
+        city: "Roma",
+        image: "/cities/europe/roma.jpeg",
+        flag: "it",
+      },
+      {
+        country: "República Tcheca",
+        city: "Praga",
+        image: "/cities/europe/praga.jpeg",
+        flag: "cz",
+      },
+      {
+        country: "Holanda",
+        city: "Amsterdã",
+        image: "/cities/europe/amsterdam.jpeg",
+        flag: "nl",
+      },
+    ],
+  };
+  return { props };
 };

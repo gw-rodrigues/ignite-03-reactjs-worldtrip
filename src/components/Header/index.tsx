@@ -6,9 +6,10 @@ interface HeaderProps {
 }
 
 export function Header({ continent }: HeaderProps) {
+  console.log(continent);
   return (
     <Flex w="100%" my="7 " maxWidth={1440} mx="auto" px="4" alignItems="center">
-      {continent !== "home" ? (
+      {continent !== "undefined" ? (
         <Button position="absolute" marginLeft="3rem">
           <Image src="/back.png" alt="Back to home" />
         </Button>
