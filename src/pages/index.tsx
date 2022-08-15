@@ -31,7 +31,7 @@ export default function Home() {
                 fontWeight="500"
                 fontSize="36px"
                 lineHeight="54px"
-                color="gray.50"
+                color="brand.gray-50"
               >
                 5 Continentes, infinitas possibilidades.
               </Text>
@@ -40,7 +40,7 @@ export default function Home() {
                 fontSize="20px"
                 lineHeight="30px"
                 marginTop="1.25rem"
-                color="gray.300"
+                color="brand.gray-300"
               >
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.
               </Text>
@@ -69,7 +69,7 @@ export default function Home() {
             fontSize="24px"
             lineHeight="36px"
             marginTop="1.25rem"
-            color="gray.900"
+            color="brand.gray-900"
           >
             vida noturna
           </Text>
@@ -81,7 +81,7 @@ export default function Home() {
             fontSize="24px"
             lineHeight="36px"
             marginTop="1.25rem"
-            color="gray.900"
+            color="brand.gray-900"
           >
             praia
           </Text>
@@ -93,7 +93,7 @@ export default function Home() {
             fontSize="24px"
             lineHeight="36px"
             marginTop="1.25rem"
-            color="gray.900"
+            color="brand.gray-900"
           >
             moderno
           </Text>
@@ -105,7 +105,7 @@ export default function Home() {
             fontSize="24px"
             lineHeight="36px"
             marginTop="1.25rem"
-            color="gray.900"
+            color="brand.gray-900"
           >
             clássico
           </Text>
@@ -117,7 +117,7 @@ export default function Home() {
             fontSize="24px"
             lineHeight="36px"
             marginTop="1.25rem"
-            color="gray.900"
+            color="brand.gray-900"
           >
             e mais...
           </Text>
@@ -128,14 +128,14 @@ export default function Home() {
         h={0}
         mx="auto"
         opacity="1"
-        borderColor="gray.900"
+        borderColor="brand.gray-900"
         borderBottomWidth="3px"
       />
       <Text
         fontWeight="500"
         fontSize="36px"
         lineHeight="54px"
-        color="gray.900"
+        color="brand.gray-900"
         mx="auto"
         my="3.25rem"
         maxW={839}

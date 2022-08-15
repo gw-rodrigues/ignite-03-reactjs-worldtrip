@@ -29,7 +29,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="48px"
               lineHeight="72px"
-              color="gray.50"
+              color="brand.gray-50"
             >
               Europa
             </Text>
@@ -37,7 +37,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="24px"
               lineHeight="36px"
-              color="gray.300"
+              color="brand.gray-300"
             >
               O continente mais antigo.
             </Text>
@@ -55,7 +55,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="48px"
               lineHeight="72px"
-              color="gray.50"
+              color="brand.gray-50"
               textShadow="2xl"
             >
               Africa
@@ -64,7 +64,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="24px"
               lineHeight="36px"
-              color="gray.300"
+              color="brand.gray-300"
               textShadow="2xl"
             >
               O continente selvagem.
@@ -83,7 +83,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="48px"
               lineHeight="72px"
-              color="gray.50"
+              color="brand.gray-50"
               textShadow="2xl"
             >
               America do norte
@@ -92,7 +92,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="24px"
               lineHeight="36px"
-              color="gray.300"
+              color="brand.gray-300"
               textShadow="2xl"
             >
               O continente dos sonhos.
@@ -111,7 +111,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="48px"
               lineHeight="72px"
-              color="gray.50"
+              color="brand.gray-50"
               textShadow="2xl"
             >
               America do sul
@@ -120,7 +120,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="24px"
               lineHeight="36px"
-              color="gray.300"
+              color="brand.gray-300"
               textShadow="2xl"
             >
               O continente da diversão.
@@ -139,7 +139,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="48px"
               lineHeight="72px"
-              color="gray.50"
+              color="brand.gray-50"
               textShadow="2xl"
             >
               Asia
@@ -148,7 +148,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="24px"
               lineHeight="36px"
-              color="gray.300"
+              color="brand.gray-300"
               textShadow="2xl"
             >
               O continente das culturas.
@@ -167,7 +167,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="48px"
               lineHeight="72px"
-              color="gray.50"
+              color="brand.gray-50"
               textShadow="2xl"
             >
               Oceania
@@ -176,7 +176,7 @@ export function Carousel() {
               fontWeight="700"
               fontSize="24px"
               lineHeight="36px"
-              color="gray.300"
+              color="brand.gray-300"
               textShadow="2xl"
             >
               O continente marítimo.
