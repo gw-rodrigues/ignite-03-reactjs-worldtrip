@@ -28,13 +28,13 @@ export default function handler(req, res) {
     },
     {
       slug: "asia",
-      title: "Asia",
+      title: "Ásia",
       slogan: "O continente das culturas.",
       image: "/banner/asia.jpeg",
     },
     {
       slug: "oceania",
-      title: "Oceania",
+      title: "Oceânia",
       slogan: "O continente marítimo.",
       image: "/banner/oceania.jpeg",
     },
