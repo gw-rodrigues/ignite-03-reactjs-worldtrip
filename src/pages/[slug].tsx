@@ -16,6 +16,7 @@ interface ContinentProps {
   slug: string | string[];
   title: string;
   description: string;
+  image: string;
   totalCountries: string;
   totalLanguages: string;
   totalCities: string;
@@ -25,6 +26,7 @@ export default function Continent({
   slug,
   title,
   description,
+  image,
   totalCountries,
   totalLanguages,
   totalCities,
@@ -37,7 +39,7 @@ export default function Continent({
         flexDir="column"
         w="100%"
         minH="500px"
-        bg="linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url('/banner-page/europe.jpeg') center no-repeat"
+        bg={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url('${image}') center no-repeat`}
         bgSize="cover"
         justifyContent="center"
         alignContent="center"
@@ -160,9 +162,15 @@ export default function Continent({
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  let { slug } = params;
+  const { slug } = params;
 
-  if (slug !== "europa") {
+  const props: ContinentProps | null = await fetch(
+    `http://localhost:3000/api/getContinentById?continent=${slug}`
+  ).then((res) => res.json());
+
+  console.log(props);
+
+  if (!props) {
     return {
       redirect: {
         destination: "/",
@@ -171,14 +179,15 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     };
   }
 
-  const props: ContinentProps = {
-    slug,
-    title: "Europa",
-    description:
-      "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
-    totalCountries: "50",
-    totalLanguages: "60",
-    totalCities: "27",
-  };
+  // props = {
+  //   slug,
+  //   title: "Europa",
+  //   description:
+  //     "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+  //   image: "/banner-page/europe.jpeg",
+  //   totalCountries: "50",
+  //   totalLanguages: "60",
+  //   totalCities: "27",
+  // };
   return { props };
 };

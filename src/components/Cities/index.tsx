@@ -15,56 +15,24 @@ interface CitiesProps {
 }
 
 export function Cities({ continent }: CitiesContinentProps) {
-  const [cities, setCities] = useState<CitiesProps[]>([]);
-
-  async function getCities() {
-    const data = await fetch(
-      `http://localhost:3000/api/getContinentCities?continent=africa`
-    ).then((res) => res.json());
-
-    if (!data) {
-    }
-    console.log(data);
-  }
-
+  const [cities, setCities] = useState<CitiesProps[] | null>([]);
   useEffect(() => {
+    async function getCities() {
+      await fetch(
+        `http://localhost:3000/api/getContinentCities?continent=${continent}`
+      )
+        .then((data) => data.json())
+        .then(setCities);
+    }
     getCities();
+  }, [continent]);
 
-    const citiesTemp: CitiesProps[] = [
-      {
-        country: "Reino Unido",
-        city: "Londres",
-        image: "/cities/europe/london.jpeg",
-        flag: "gb",
-      },
-      {
-        country: "França",
-        city: "Paris",
-        image: "/cities/europe/paris.jpeg",
-        flag: "fr",
-      },
-      {
-        country: "Itália",
-        city: "Roma",
-        image: "/cities/europe/roma.jpeg",
-        flag: "it",
-      },
-      {
-        country: "República Tcheca",
-        city: "Praga",
-        image: "/cities/europe/praga.jpeg",
-        flag: "cz",
-      },
-      {
-        country: "Holanda",
-        city: "Amsterdã",
-        image: "/cities/europe/amsterdam.jpeg",
-        flag: "nl",
-      },
-    ];
-
-    setCities(citiesTemp);
-  }, []);
+  if (!cities)
+    return (
+      <Text fontWeight="500" fontSize="36px" lineHeight="54px">
+        As cidades não foram encontradas.
+      </Text>
+    );
 
   return (
     <VStack alignItems="start" maxW={1160}>
