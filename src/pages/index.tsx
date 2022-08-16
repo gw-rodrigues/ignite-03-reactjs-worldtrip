@@ -15,7 +15,8 @@ export default function Home() {
   return (
     <Flex w="100%" height="99vh" flexDirection="column" margin="auto">
       <Header continent="home" />
-      <Box w="100%" h="368.21px" position="relative">
+
+      <Box w="100%" h="368.21px" position="relative" marginTop="0.5rem">
         <Flex
           flexDir="column"
           w="100%"
@@ -62,7 +63,12 @@ export default function Home() {
         mx="auto"
         justifyContent="space-evenly"
       >
-        <Flex flexDir="column" alignItems="center">
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          transition="filter .2s"
+          _hover={{ filter: "brightness(.8)" }}
+        >
           <Image maxW="85px" maxH="85px" src="/cocktail.png" alt="cocktail" />
           <Text
             fontWeight="600"
@@ -74,7 +80,12 @@ export default function Home() {
             vida noturna
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems="center">
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          transition="filter .2s"
+          _hover={{ filter: "brightness(.8)" }}
+        >
           <Image maxW="85px" maxH="85px" src="/surf.png" alt="cocktail" />
           <Text
             fontWeight="600"
@@ -86,7 +97,12 @@ export default function Home() {
             praia
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems="center">
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          transition="filter .2s"
+          _hover={{ filter: "brightness(.8)" }}
+        >
           <Image maxW="85px" maxH="85px" src="/building.png" alt="cocktail" />
           <Text
             fontWeight="600"
@@ -98,7 +114,12 @@ export default function Home() {
             moderno
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems="center">
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          transition="filter .2s"
+          _hover={{ filter: "brightness(.8)" }}
+        >
           <Image maxW="85px" maxH="85px" src="/museum.png" alt="cocktail" />
           <Text
             fontWeight="600"
@@ -110,7 +131,12 @@ export default function Home() {
             clássico
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems="center">
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          transition="filter .2s"
+          _hover={{ filter: "brightness(.8)" }}
+        >
           <Image maxW="85px" maxH="85px" src="/earth.png" alt="cocktail" />
           <Text
             fontWeight="600"

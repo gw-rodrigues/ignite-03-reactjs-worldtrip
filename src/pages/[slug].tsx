@@ -7,21 +7,10 @@
 - Oceania.
 */
 
-import {
-  Box,
-  Flex,
-  HStack,
-  Image,
-  Stack,
-  Text,
-  Tooltip,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, Tooltip, VStack } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
-
+import { Cities } from "../components/Cities";
 import { Header } from "../components/Header";
-
-import { CircleFlag } from "react-circle-flags";
 
 interface ContinentProps {
   slug: string | string[];
@@ -30,12 +19,6 @@ interface ContinentProps {
   totalCountries: string;
   totalLanguages: string;
   totalCities: string;
-  data: {
-    city: string;
-    country: string;
-    image: string;
-    flag: string;
-  }[];
 }
 
 export default function Continent({
@@ -45,7 +28,6 @@ export default function Continent({
   totalCountries,
   totalLanguages,
   totalCities,
-  data,
 }: ContinentProps): JSX.Element {
   return (
     <VStack w="100%" height="99vh" margin="auto">
@@ -171,80 +153,23 @@ export default function Continent({
           </VStack>
         </HStack>
       </HStack>
-      <VStack alignItems="start" maxW={1160}>
-        <Text fontWeight="500" fontSize="36px" lineHeight="54px">
-          Cidade +100
-        </Text>
-        <Flex
-          flexWrap="wrap"
-          gap="45px"
-          py="40px"
-          width="100%"
-          justifyItems="start"
-        >
-          {data.map((continent) => (
-            <Box
-              key={continent.country}
-              w="256px"
-              h=" 279px"
-              border="1px solid"
-              borderColor="brand.yellow-550"
-              borderRadius="4px"
-              bg="white"
-              overflow="hidden"
-            >
-              <Flex
-                w="100%"
-                h="173px"
-                justifyItems="center"
-                alignItems="center"
-                overflow="hidden"
-              >
-                <Image
-                  minH="100%"
-                  w="auto"
-                  src={continent.image}
-                  alt={continent.city}
-                />
-              </Flex>
-              <HStack
-                h="104px"
-                alignContent="center"
-                justifyContent="space-between"
-                px="24px"
-              >
-                <VStack alignItems="start">
-                  <Text
-                    lineHeight="25px"
-                    fontWeight="600"
-                    fontSize="20px"
-                    color="brand.gray-900"
-                  >
-                    {continent.city}
-                  </Text>
-                  <Text
-                    lineHeight="26px"
-                    fontWeight="500"
-                    fontSize="16px"
-                    color="brand.gray-400"
-                  >
-                    {continent.country}
-                  </Text>
-                </VStack>
-                <Box w={30} h={30}>
-                  <CircleFlag countryCode={continent.flag} />
-                </Box>
-              </HStack>
-            </Box>
-          ))}
-        </Flex>
-      </VStack>
+
+      <Cities continent={slug} />
     </VStack>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   let { slug } = params;
+
+  if (slug !== "europa") {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
 
   const props: ContinentProps = {
     slug,
@@ -254,38 +179,6 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     totalCountries: "50",
     totalLanguages: "60",
     totalCities: "27",
-    data: [
-      {
-        country: "Reino Unido",
-        city: "Londres",
-        image: "/cities/europe/london.jpeg",
-        flag: "gb",
-      },
-      {
-        country: "França",
-        city: "Paris",
-        image: "/cities/europe/paris.jpeg",
-        flag: "fr",
-      },
-      {
-        country: "Itália",
-        city: "Roma",
-        image: "/cities/europe/roma.jpeg",
-        flag: "it",
-      },
-      {
-        country: "República Tcheca",
-        city: "Praga",
-        image: "/cities/europe/praga.jpeg",
-        flag: "cz",
-      },
-      {
-        country: "Holanda",
-        city: "Amsterdã",
-        image: "/cities/europe/amsterdam.jpeg",
-        flag: "nl",
-      },
-    ],
   };
   return { props };
 };
