@@ -168,8 +168,6 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     `http://localhost:3000/api/getContinentById?continent=${slug}`
   ).then((res) => res.json());
 
-  console.log(props);
-
   if (!props) {
     return {
       redirect: {
@@ -179,15 +177,5 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     };
   }
 
-  // props = {
-  //   slug,
-  //   title: "Europa",
-  //   description:
-  //     "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
-  //   image: "/banner-page/europe.jpeg",
-  //   totalCountries: "50",
-  //   totalLanguages: "60",
-  //   totalCities: "27",
-  // };
   return { props };
 };
