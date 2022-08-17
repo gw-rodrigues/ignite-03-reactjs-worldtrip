@@ -1,45 +1,58 @@
-import { Box, Flex, Image, Text, Stack } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Stack, HStack } from "@chakra-ui/react";
 
 export function Banner() {
   return (
-    <Box w="100%" h="368.21px" position="relative" marginTop="0.5rem">
+    <Box w="100%" h={[163, 223, 368.21]} mt="2">
       <Flex
-        flexDir="column"
+        direction="column"
         w="100%"
-        h="335px"
-        bg="#fff 10% 25% url('/sky.jpeg') no-repeat"
+        bg="#fff 10% 25% url('/sky.jpeg') no-repeat fixed"
         bgSize="cover"
-        justifyContent="center"
-        alignContent="center"
+        alignItems="center"
+        justifyItems="center"
+        px="4"
       >
-        <Stack m="auto" w="100%" maxW={1440} position="relative">
-          <Box maxW="524px" marginLeft="8.75rem">
+        <HStack
+          justifyContent={["center", "space-between"]}
+          alignItems="center"
+          justifyItems="center"
+          w="100%"
+          maxW={1160}
+          h={[163, 223, 335]}
+        >
+          <Box maxW={524} zIndex={1}>
             <Text
-              fontWeight="500"
-              fontSize="36px"
-              lineHeight="54px"
+              fontWeight="medium"
+              fontSize={["xl", "3xl", "4xl"]}
+              lineHeight={["3xl", "5xl"]}
               color="brand.gray-50"
             >
               5 Continentes, infinitas possibilidades.
             </Text>
             <Text
-              fontWeight="400"
-              fontSize="20px"
-              lineHeight="30px"
-              marginTop="1.25rem"
+              fontWeight="normal"
+              fontSize={["sm", "md", "lg"]}
+              lineHeight={["xl", "3xl"]}
+              marginTop="5"
               color="brand.gray-300"
             >
               Chegou a hora de tirar do papel a viagem que você sempre sonhou.
             </Text>
           </Box>
-          <Image
-            position="absolute"
-            bottom="-110.21px"
-            right="8.75rem"
-            src="/airplane.png"
-            alt="Banner home"
-          />
-        </Stack>
+          <Box
+            w="100%"
+            maxW={{ md: 333, lg: 433 }}
+            display={["none", "none", "block"]}
+            pos="relative"
+          >
+            <Image
+              position="absolute"
+              bottom={["-12.7rem"]}
+              src="/airplane.png"
+              alt="airplane"
+            />
+          </Box>
+        </HStack>
       </Flex>
     </Box>
   );

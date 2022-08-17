@@ -42,7 +42,7 @@ export function Carousel() {
             <SwiperSlide key={continent.slug}>
               <VStack
                 w="100%"
-                h="450px"
+                h={["250px", "350px", "450px"]}
                 alignItems="center"
                 justifyContent="center"
                 background={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url('${continent.image}') center`}
@@ -58,16 +58,16 @@ export function Carousel() {
                   >
                     <Text
                       fontWeight="700"
-                      fontSize="48px"
-                      lineHeight="72px"
+                      fontSize={["24px", "32px", "48px"]}
+                      lineHeight={["36px", "58px", "72px"]}
                       color="brand.gray-50"
                     >
                       {continent.title}
                     </Text>
                     <Text
                       fontWeight="700"
-                      fontSize="24px"
-                      lineHeight="36px"
+                      fontSize={["14px", "18px", "24px"]}
+                      lineHeight={["21px", "28px", "36px"]}
                       color="brand.gray-300"
                     >
                       {continent.slogan}
