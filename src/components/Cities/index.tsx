@@ -35,16 +35,20 @@ export function Cities({ continent }: CitiesContinentProps) {
     );
 
   return (
-    <VStack alignItems="start" maxW={1160}>
-      <Text fontWeight="500" fontSize="36px" lineHeight="54px">
+    <VStack alignItems="start" maxW={1160} mx="auto" px={{ base: "4", xl: 0 }}>
+      <Text
+        fontWeight="medium"
+        fontSize={{ base: "2xl", lg: "4xl" }}
+        lineHeight="54px"
+      >
         Cidades +100
       </Text>
       <Flex
         flexWrap="wrap"
-        gap="45px"
+        gap={[5, 7, 9, "45px"]}
         py="40px"
         width="100%"
-        justifyItems="start"
+        justifyContent={{ base: "center", xl: "space-between" }}
       >
         {cities.map(({ country, city, image, flag }: CitiesProps) => (
           <Box
@@ -77,7 +81,7 @@ export function Cities({ continent }: CitiesContinentProps) {
               <VStack alignItems="start">
                 <Text
                   lineHeight="25px"
-                  fontWeight="600"
+                  fontWeight="semibold"
                   fontSize="20px"
                   color="brand.gray-900"
                 >
@@ -85,7 +89,7 @@ export function Cities({ continent }: CitiesContinentProps) {
                 </Text>
                 <Text
                   lineHeight="26px"
-                  fontWeight="500"
+                  fontWeight="medium"
                   fontSize="16px"
                   color="brand.gray-400"
                 >

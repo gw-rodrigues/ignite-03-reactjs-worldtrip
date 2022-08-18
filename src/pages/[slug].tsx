@@ -7,7 +7,7 @@
 - Oceania.
 */
 
-import { Box, HStack, Text, Tooltip, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, Tooltip, VStack } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 import { Cities } from "../components/Cities";
 import { Header } from "../components/Header";
@@ -32,13 +32,12 @@ export default function Continent({
   totalCities,
 }: ContinentProps) {
   return (
-    <VStack w="100%" height="99vh" margin="auto">
+    <VStack w="100%" margin="auto">
       <Header continent={String(slug)} />
 
-      <Box
-        flexDir="column"
+      <VStack
         w="100%"
-        minH="500px"
+        minH={["150px", "300px", "500px"]}
         bg={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url('${image}') center no-repeat`}
         bgSize="cover"
         justifyContent="center"
@@ -46,88 +45,97 @@ export default function Continent({
         position="relative"
       >
         <Text
-          fontWeight="500"
-          fontSize="36px"
-          lineHeight="54px"
+          fontWeight="semibold"
+          fontSize={["1.75rem", "4xl", "5xl"]}
+          lineHeight="3.375rem"
           color="gray.50"
-          position="absolute"
-          bottom="3.68rem"
-          left="8.75%"
+          position={{ base: "relative", md: "absolute" }}
+          bottom={{ base: 0, md: "3.68rem" }}
+          left={{ base: 0, md: "8.75%" }}
         >
           {title}
         </Text>
-      </Box>
+      </VStack>
 
       <HStack
-        py="5rem"
+        py={[6, 12, 20]}
         mx="auto"
-        gap={70}
         flexWrap="wrap"
-        justifyContent="space-between"
+        justifyContent={{ base: "center", xl: "space-between" }}
         w="100%"
         maxW={1160}
-        px={[6, 0]}
+        px={{ base: 4, xl: 0 }}
+        gap={[4, 30, 70]}
       >
         <Text
-          maxW={600}
-          fontWeight="400"
-          fontSize="24px"
-          lineHeight="36px"
+          maxW={{ base: "100%", xl: 600 }}
+          fontWeight="normal"
+          fontSize={["sm", "lg", "2xl"]}
+          lineHeight={["short", 7, 9]}
           textAlign="justify"
         >
           {description}
         </Text>
-        <HStack gap={42} flexWrap="wrap" justifyContent="center">
-          <VStack textAlign="center">
+
+        <Flex
+          gap={{ base: 2, md: 42 }}
+          wrap="wrap"
+          justifyContent={{ sm: "center", base: "space-between" }}
+          direction={{ base: "column", xs: "row" }}
+          border="1px solid red"
+          width={["100%", "auto"]}
+        >
+          <VStack alignItems={{ base: "start", xl: "center" }}>
             <Text
-              fontWeight="600"
-              fontSize="48px"
-              lineHeight="72px"
+              textAlign="left"
+              fontWeight="semibold"
+              fontSize={{ base: "2xl", lg: "5xl" }}
+              lineHeight={{ base: 9, lg: "4.5rem" }}
               color="brand.yellow-550"
             >
               {totalCountries}
             </Text>
             <Text
-              fontWeight="600"
-              fontSize="24px"
-              lineHeight="36px"
+              fontWeight={{ lg: "semibold" }}
+              fontSize={{ base: "lg", lg: "2xl" }}
+              lineHeight={{ base: "1.6875rem", lg: 9 }}
               color="brand.gray-900"
             >
               países
             </Text>
           </VStack>
-          <VStack>
+          <VStack alignItems={{ base: "start", xl: "center" }}>
             <Text
-              fontWeight="600"
-              fontSize="48px"
-              lineHeight="72px"
+              fontWeight="semibold"
+              fontSize={{ base: "2xl", lg: "5xl" }}
+              lineHeight={{ base: 9, lg: "4.5rem" }}
               color="brand.yellow-550"
             >
               {totalLanguages}
             </Text>
             <Text
-              fontWeight="600"
-              fontSize="24px"
-              lineHeight="36px"
+              fontWeight={{ lg: "semibold" }}
+              fontSize={{ base: "lg", lg: "2xl" }}
+              lineHeight={{ base: "1.6875rem", lg: 9 }}
               color="brand.gray-900"
             >
               línguas
             </Text>
           </VStack>
-          <VStack>
+          <VStack alignItems={{ base: "start", xl: "center" }}>
             <Text
-              fontWeight="600"
-              fontSize="48px"
-              lineHeight="72px"
+              fontWeight="semibold"
+              fontSize={{ base: "2xl", lg: "5xl" }}
+              lineHeight={{ base: 9, lg: "4.5rem" }}
               color="brand.yellow-550"
             >
               {totalCities}
             </Text>
             <HStack>
               <Text
-                fontWeight="600"
-                fontSize="24px"
-                lineHeight="36px"
+                fontWeight={{ lg: "semibold" }}
+                fontSize={{ base: "lg", lg: "2xl" }}
+                lineHeight={{ base: "1.6875rem", lg: 9 }}
                 color="brand.gray-900"
                 gap="8px"
               >
@@ -153,7 +161,7 @@ export default function Continent({
               </Tooltip>
             </HStack>
           </VStack>
-        </HStack>
+        </Flex>
       </HStack>
 
       <Cities continent={slug} />

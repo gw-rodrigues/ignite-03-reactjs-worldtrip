@@ -22,4 +22,7 @@ export const theme = extendTheme({
       },
     },
   },
+  sizes: {
+    xs: "20rem",
+  },
 });

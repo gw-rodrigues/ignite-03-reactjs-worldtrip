@@ -50,9 +50,9 @@ export default function Home() {
             display={{ base: "block", md: "none" }}
           ></Box>
           <Text
-            fontWeight="600"
-            fontSize={{ sm: "18px", md: "24px" }}
-            lineHeight={{ sm: "27px", md: "36px" }}
+            fontWeight="semibold"
+            fontSize={{ sm: "lg", md: "2xl" }}
+            lineHeight={{ sm: "tall", md: 9 }}
             marginTop={{ sm: 0, md: "1.25rem" }}
             color="brand.gray-900"
             ml={{ base: 2, md: 0 }}
@@ -81,9 +81,9 @@ export default function Home() {
             display={{ base: "block", md: "none" }}
           ></Box>
           <Text
-            fontWeight="600"
-            fontSize={{ sm: "18px", md: "24px" }}
-            lineHeight={{ sm: "27px", md: "36px" }}
+            fontWeight="semibold"
+            fontSize={{ sm: "lg", md: "2xl" }}
+            lineHeight={{ sm: "tall", md: 9 }}
             marginTop={{ sm: 0, md: "1.25rem" }}
             ml={{ base: 2, md: 0 }}
             color="brand.gray-900"
@@ -113,9 +113,9 @@ export default function Home() {
             display={{ base: "block", md: "none" }}
           ></Box>
           <Text
-            fontWeight="600"
-            fontSize={{ sm: "18px", md: "24px" }}
-            lineHeight={{ sm: "27px", md: "36px" }}
+            fontWeight="semibold"
+            fontSize={{ sm: "lg", md: "2xl" }}
+            lineHeight={{ sm: "tall", md: 9 }}
             marginTop={{ sm: 0, md: "1.25rem" }}
             ml={{ base: 2, md: 0 }}
             color="brand.gray-900"
@@ -144,9 +144,9 @@ export default function Home() {
             display={{ base: "block", md: "none" }}
           ></Box>
           <Text
-            fontWeight="600"
-            fontSize={{ sm: "18px", md: "24px" }}
-            lineHeight={{ sm: "27px", md: "36px" }}
+            fontWeight="semibold"
+            fontSize={{ sm: "lg", md: "2xl" }}
+            lineHeight={{ sm: "tall", md: 9 }}
             marginTop={{ sm: 0, md: "1.25rem" }}
             ml={{ base: 2, md: 0 }}
             color="brand.gray-900"
@@ -175,9 +175,9 @@ export default function Home() {
             display={{ base: "block", md: "none" }}
           ></Box>
           <Text
-            fontWeight="600"
-            fontSize={{ sm: "18px", md: "24px" }}
-            lineHeight={{ sm: "27px", md: "36px" }}
+            fontWeight="semibold"
+            fontSize={{ sm: "lg", md: "2xl" }}
+            lineHeight={{ sm: "tall", md: 9 }}
             marginTop={{ sm: 0, md: "1.25rem" }}
             ml={{ base: 2, md: 0 }}
             color="brand.gray-900"
@@ -196,7 +196,7 @@ export default function Home() {
         borderBottomWidth="3px"
       />
       <Text
-        fontWeight="500"
+        fontWeight="medium"
         fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
         lineHeight={{ base: "1.875rem", sm: "2.5rem", md: "3.375rem" }}
         color="brand.gray-900"

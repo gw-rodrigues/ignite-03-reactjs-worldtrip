@@ -57,17 +57,17 @@ export function Carousel() {
                     }}
                   >
                     <Text
-                      fontWeight="700"
-                      fontSize={["24px", "32px", "48px"]}
-                      lineHeight={["36px", "58px", "72px"]}
+                      fontWeight="bold"
+                      fontSize={["2xl", "4xl", "5xl"]}
+                      lineHeight={[9, "3,625rem", "4.5rem"]}
                       color="brand.gray-50"
                     >
                       {continent.title}
                     </Text>
                     <Text
-                      fontWeight="700"
-                      fontSize={["14px", "18px", "24px"]}
-                      lineHeight={["21px", "28px", "36px"]}
+                      fontWeight="bold"
+                      fontSize={["sm", "lg", "2xl"]}
+                      lineHeight={["1.3125rem", 7, 9]}
                       color="brand.gray-300"
                     >
                       {continent.slogan}
