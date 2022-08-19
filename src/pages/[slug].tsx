@@ -65,7 +65,6 @@ export default function Continent({
         w="100%"
         maxW={1160}
         px={{ base: 4, xl: 0 }}
-        gap={[4, 30, 70]}
       >
         <Text
           maxW={{ base: "100%", xl: 600 }}
@@ -78,14 +77,17 @@ export default function Continent({
         </Text>
 
         <Flex
-          gap={{ base: 2, md: 42 }}
           wrap="wrap"
-          justifyContent={{ sm: "center", base: "space-between" }}
+          justifyContent={{ base: "space-between" }}
+          alignContent="center"
           direction={{ base: "column", xs: "row" }}
-          border="1px solid red"
-          width={["100%", "auto"]}
+          width={["100%"]}
+          maxW={490}
         >
-          <VStack alignItems={{ base: "start", xl: "center" }}>
+          <VStack
+            alignItems={{ base: "center", xs: "start", xl: "center" }}
+            pt={{ base: 8, xs: 4, md: 8, xl: 0 }}
+          >
             <Text
               textAlign="left"
               fontWeight="semibold"
@@ -104,7 +106,10 @@ export default function Continent({
               países
             </Text>
           </VStack>
-          <VStack alignItems={{ base: "start", xl: "center" }}>
+          <VStack
+            alignItems={{ base: "center", xs: "start", xl: "center" }}
+            pt={{ base: 8, xs: 4, md: 8, xl: 0 }}
+          >
             <Text
               fontWeight="semibold"
               fontSize={{ base: "2xl", lg: "5xl" }}
@@ -122,7 +127,10 @@ export default function Continent({
               línguas
             </Text>
           </VStack>
-          <VStack alignItems={{ base: "start", xl: "center" }}>
+          <VStack
+            alignItems={{ base: "center", xs: "start", xl: "center" }}
+            pt={{ base: 8, xs: 4, md: 8, xl: 0 }}
+          >
             <Text
               fontWeight="semibold"
               fontSize={{ base: "2xl", lg: "5xl" }}

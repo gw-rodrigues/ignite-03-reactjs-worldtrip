@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export function Header({ continent }: HeaderProps) {
   return (
-    <Flex w="100%" my="7 " maxWidth={1440} px={["2", "4"]} alignItems="center">
+    <Flex w="100%" my="7" mx="auto" maxWidth={1440} px={["2", "4"]}>
       {continent !== "home" ? (
         <Link href="/">
           <ChakraLink
