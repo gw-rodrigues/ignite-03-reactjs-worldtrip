@@ -22,7 +22,7 @@ export const theme = extendTheme({
       },
     },
   },
-  sizes: {
-    xs: "20rem",
+  breakpoints: {
+    xs: "22rem",
   },
 });
