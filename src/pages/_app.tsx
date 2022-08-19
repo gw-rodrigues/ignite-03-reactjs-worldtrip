@@ -11,7 +11,7 @@ import { theme } from "../styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} cssVarsRoot="body">
       <Component {...pageProps} />
     </ChakraProvider>
   );
