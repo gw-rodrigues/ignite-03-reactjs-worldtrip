@@ -7,9 +7,10 @@
 - Oceania.
 */
 
-import { Box, Flex, HStack, Text, Tooltip, VStack } from "@chakra-ui/react";
+import { Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 import { Cities } from "../components/Cities";
+import { ContinentData } from "../components/ContinentData";
 import { Header } from "../components/Header";
 
 interface ContinentProps {
@@ -76,100 +77,11 @@ export default function Continent({
           {description}
         </Text>
 
-        <Flex
-          wrap="wrap"
-          justifyContent={{ base: "space-between" }}
-          alignContent="center"
-          direction={{ base: "column", xs: "row" }}
-          width={["100%"]}
-          maxW={490}
-        >
-          <VStack
-            alignItems={{ base: "center", xs: "start", xl: "center" }}
-            pt={{ base: 8, xs: 4, md: 8, xl: 0 }}
-          >
-            <Text
-              textAlign="left"
-              fontWeight="semibold"
-              fontSize={{ base: "2xl", lg: "5xl" }}
-              lineHeight={{ base: 9, lg: "4.5rem" }}
-              color="brand.yellow-550"
-            >
-              {totalCountries}
-            </Text>
-            <Text
-              fontWeight={{ lg: "semibold" }}
-              fontSize={{ base: "lg", lg: "2xl" }}
-              lineHeight={{ base: "1.6875rem", lg: 9 }}
-              color="brand.gray-900"
-            >
-              países
-            </Text>
-          </VStack>
-          <VStack
-            alignItems={{ base: "center", xs: "start", xl: "center" }}
-            pt={{ base: 8, xs: 4, md: 8, xl: 0 }}
-          >
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: "2xl", lg: "5xl" }}
-              lineHeight={{ base: 9, lg: "4.5rem" }}
-              color="brand.yellow-550"
-            >
-              {totalLanguages}
-            </Text>
-            <Text
-              fontWeight={{ lg: "semibold" }}
-              fontSize={{ base: "lg", lg: "2xl" }}
-              lineHeight={{ base: "1.6875rem", lg: 9 }}
-              color="brand.gray-900"
-            >
-              línguas
-            </Text>
-          </VStack>
-          <VStack
-            alignItems={{ base: "center", xs: "start", xl: "center" }}
-            pt={{ base: 8, xs: 4, md: 8, xl: 0 }}
-          >
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: "2xl", lg: "5xl" }}
-              lineHeight={{ base: 9, lg: "4.5rem" }}
-              color="brand.yellow-550"
-            >
-              {totalCities}
-            </Text>
-            <HStack>
-              <Text
-                fontWeight={{ lg: "semibold" }}
-                fontSize={{ base: "lg", lg: "2xl" }}
-                lineHeight={{ base: "1.6875rem", lg: 9 }}
-                color="brand.gray-900"
-                gap="8px"
-              >
-                cidades +100
-              </Text>
-              <Tooltip label="Quantidade de cidades que tem este continente.">
-                <Text
-                  display="inline-block"
-                  flex="1 0 16px"
-                  w="16px"
-                  h="16px"
-                  fontSize="10px"
-                  lineHeight="12px"
-                  color="brand.gray-400"
-                  borderColor="brand.gray-900"
-                  border="3px solid"
-                  borderRadius="50"
-                  textAlign="center"
-                  opacity=".5"
-                >
-                  i
-                </Text>
-              </Tooltip>
-            </HStack>
-          </VStack>
-        </Flex>
+        <ContinentData
+          totalLanguages={totalLanguages}
+          totalCities={totalCities}
+          totalCountries={totalCountries}
+        />
       </HStack>
 
       <Cities continent={slug} />

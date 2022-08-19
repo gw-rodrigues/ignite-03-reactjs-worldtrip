@@ -11,6 +11,7 @@ import {
 import { Header } from "../components/Header";
 import { Carousel } from "../components/Carousel";
 import { Banner } from "../components/Banner";
+import { Trip } from "../components/Trip";
 
 export default function Home() {
   return (
@@ -29,162 +30,11 @@ export default function Home() {
         wrap="wrap"
         gap={[9, 12, 4]}
       >
-        <Flex
-          direction={{ sm: "row", md: "column" }}
-          alignItems="center"
-          transition="filter .2s"
-          _hover={{ filter: "brightness(.8)" }}
-        >
-          <Image
-            maxW="85px"
-            maxH="85px"
-            src="/cocktail.png"
-            alt="cocktail"
-            display={{ md: "block", base: "none" }}
-          />
-          <Box
-            w={2}
-            h={2}
-            borderRadius={50}
-            backgroundColor="brand.yellow-550"
-            display={{ base: "block", md: "none" }}
-          ></Box>
-          <Text
-            fontWeight="semibold"
-            fontSize={{ sm: "lg", md: "2xl" }}
-            lineHeight={{ sm: "tall", md: 9 }}
-            marginTop={{ sm: 0, md: "1.25rem" }}
-            color="brand.gray-900"
-            ml={{ base: 2, md: 0 }}
-          >
-            vida noturna
-          </Text>
-        </Flex>
-        <Flex
-          direction={{ sm: "row", md: "column" }}
-          alignItems="center"
-          transition="filter .2s"
-          _hover={{ filter: "brightness(.8)" }}
-        >
-          <Image
-            maxW="85px"
-            maxH="85px"
-            src="/surf.png"
-            alt="cocktail"
-            display={{ md: "block", base: "none" }}
-          />
-          <Box
-            w={2}
-            h={2}
-            borderRadius={50}
-            backgroundColor="brand.yellow-550"
-            display={{ base: "block", md: "none" }}
-          ></Box>
-          <Text
-            fontWeight="semibold"
-            fontSize={{ sm: "lg", md: "2xl" }}
-            lineHeight={{ sm: "tall", md: 9 }}
-            marginTop={{ sm: 0, md: "1.25rem" }}
-            ml={{ base: 2, md: 0 }}
-            color="brand.gray-900"
-          >
-            praia
-          </Text>
-        </Flex>
-
-        <Flex
-          direction={{ sm: "row", md: "column" }}
-          alignItems="center"
-          transition="filter .2s"
-          _hover={{ filter: "brightness(.8)" }}
-        >
-          <Image
-            maxW="85px"
-            maxH="85px"
-            src="/building.png"
-            alt="cocktail"
-            display={{ md: "block", base: "none" }}
-          />
-          <Box
-            w={2}
-            h={2}
-            borderRadius={50}
-            backgroundColor="brand.yellow-550"
-            display={{ base: "block", md: "none" }}
-          ></Box>
-          <Text
-            fontWeight="semibold"
-            fontSize={{ sm: "lg", md: "2xl" }}
-            lineHeight={{ sm: "tall", md: 9 }}
-            marginTop={{ sm: 0, md: "1.25rem" }}
-            ml={{ base: 2, md: 0 }}
-            color="brand.gray-900"
-          >
-            moderno
-          </Text>
-        </Flex>
-        <Flex
-          direction={{ sm: "row", md: "column" }}
-          alignItems="center"
-          transition="filter .2s"
-          _hover={{ filter: "brightness(.8)" }}
-        >
-          <Image
-            maxW="85px"
-            maxH="85px"
-            src="/museum.png"
-            alt="cocktail"
-            display={{ md: "block", base: "none" }}
-          />
-          <Box
-            w={2}
-            h={2}
-            borderRadius={50}
-            backgroundColor="brand.yellow-550"
-            display={{ base: "block", md: "none" }}
-          ></Box>
-          <Text
-            fontWeight="semibold"
-            fontSize={{ sm: "lg", md: "2xl" }}
-            lineHeight={{ sm: "tall", md: 9 }}
-            marginTop={{ sm: 0, md: "1.25rem" }}
-            ml={{ base: 2, md: 0 }}
-            color="brand.gray-900"
-          >
-            clássico
-          </Text>
-        </Flex>
-        <Flex
-          direction={{ sm: "row", md: "column" }}
-          alignItems="center"
-          transition="filter .2s"
-          _hover={{ filter: "brightness(.8)" }}
-        >
-          <Image
-            maxW="85px"
-            maxH="85px"
-            src="/earth.png"
-            alt="cocktail"
-            display={{ md: "block", base: "none" }}
-          />
-          <Box
-            w={2}
-            h={2}
-            borderRadius={50}
-            backgroundColor="brand.yellow-550"
-            display={{ base: "block", md: "none" }}
-          ></Box>
-          <Text
-            fontWeight="semibold"
-            fontSize={{ sm: "lg", md: "2xl" }}
-            lineHeight={{ sm: "tall", md: 9 }}
-            marginTop={{ sm: 0, md: "1.25rem" }}
-            ml={{ base: 2, md: 0 }}
-            color="brand.gray-900"
-          >
-            e mais...
-          </Text>
-        </Flex>
+        <Trip icon="cocktail" title="vida noturna" />
+        <Trip icon="surf" title="praia" />
+        <Trip icon="building" title="moderno" />
+        <Trip icon="museum" title="clássico" />
+        <Trip icon="earth" title="e mais..." />
       </HStack>
 
       <Divider
