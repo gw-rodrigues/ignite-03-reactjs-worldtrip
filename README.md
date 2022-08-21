@@ -7,24 +7,24 @@
 ![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP.svg)
 
 
-<p></p>
+<p>Creating ao content in plain html. <br/> Add chakra styling.</p>
 
 ![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP-1.svg)
 
-<p></p>
+<p>Creating and making components. <br/> Add functions.</p>
 
 ![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP-2.svg)
 
-<p></p>
+<p>Add Serverless API. <br/> Making API request and processing data.</p>
 
 ![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP-3.svg)
 
-<p></p>
+<p>Add mobile version and responsive. <br/> Re-factoring, small parts/components.</p>
 
 ![More...](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/STEP-4.svg)
 
 
-<p></p>
+<p>Fixing small bugs.<br/>Creating github and linkedin posts versions.<br/>Sharing the app.</p>
 
 ![Instalation](https://gist.githubusercontent.com/gw-rodrigues/d0ea04e57502976391b0f71b9a06d918/raw/eba1ec06e6bf00f792d9f1f4ca4ce7df1dab9673/Instalation.svg)
 
